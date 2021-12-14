@@ -1,3 +1,4 @@
+from pathlib import Path
 from setuptools import find_packages, setup
 
 
@@ -36,4 +37,5 @@ setup(
     entry_points={
         'console_scripts': [],
     },
+    version=version,
 )
