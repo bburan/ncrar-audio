@@ -14,6 +14,16 @@ extras_require = {
 }
 
 
+# Get version number
+version_file = Path(__file__).parent / 'ncrar_audio' / '__init__.py'
+for line in version_file.open():
+    if line.strip().startswith('__version__'):
+        version = line.split('=')[1].strip().strip('\'')
+        break
+else:
+    raise RuntimeError('Could not determine version')
+
+
 setup(
     name='ncrar-audio',
     author='Brad Buran',
