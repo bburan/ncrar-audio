@@ -39,7 +39,7 @@ class Babyface(SoundDevice):
             self.osc_client.dispatch.map('/1/micgain*Val', self._mic_gain_updated)
 
         name = 'ASIO Fireface USB'
-        super().__init__(name, name)
+        super().__init__(name, name, input_scale=0.3395)
 
     def set_volume(self, db, channels=None):
         if channels is None:
