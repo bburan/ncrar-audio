@@ -6,6 +6,7 @@ requirements = [
     'numpy',
     'python-osc',
     'sounddevice',
+    'pyxid2',
 ]
 
 
